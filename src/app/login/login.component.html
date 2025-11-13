@@ -1,22 +1,24 @@
 <mat-card class="auth-card">
-  <h2>Login</h2>
+  <h2>ลงชื่อเข้าใช้งาน</h2>
 
   <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="username" type="text">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Password</mat-label>
-      <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password">
-      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
-        <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
-      </button>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Login</button>
+    <div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" type="text">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit">ลงชื่อเข้าใช้งาน</button>
   </form>
 
-  <p>Don't have an account? <a routerLink="/register">Register</a></p>
+  <div style="margin-top: 15px"><a routerLink="/register">สมัครสมาชิก</a></div>
 </mat-card>
