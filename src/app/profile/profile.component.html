@@ -1,0 +1,10 @@
+<mat-card class="auth-card">
+  <h2>Profile</h2>
+
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>UserName:</strong> {{ user.username }}</p>
+  <p><strong>Phone Number:</strong> {{ user.phone_no }}</p>
+  <p><strong>Address:</strong> {{ user.address }}</p>
+
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</mat-card>
